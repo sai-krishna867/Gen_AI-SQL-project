@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 # Get the API key from environment variables
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = st.secrets["api"]
 genai.configure(api_key=api_key)
 
 def get_gemini_response(question,prompt):
